@@ -31,13 +31,7 @@ window.onload = function() {
         document.querySelectorAll('.animated-element').forEach(el => {
             el.style.animationPlayState = 'running';
         });
-    }, 1000); // Adjust delay as needed
-
-    // var backgroundMusic = document.getElementById('background-music');
-    // backgroundMusic.play().catch(e => {
-    //     console.log("Autoplay was prevented by the browser.");
-    //     // You can show a play button here for users to start the music.
-    // });
+    }, 1000); 
 
     var music = document.getElementById('background-music');
     var toggleButton = document.getElementById('toggle-music');
@@ -51,6 +45,11 @@ window.onload = function() {
             toggleButton.textContent = 'Play Music';
         }
     });
+
+    var playButton = document.getElementById('toggle-music');
+    if (playButton) {
+        playButton.click(); 
+    }
 
     // Generate multiple snowflakes
     setInterval(createSnowflake, 100);
@@ -85,5 +84,5 @@ function createBalloon() {
 }
 
 // Generate balloons at random intervals
-setInterval(createBalloon, 1000); // Adjust interval as needed
+setInterval(createBalloon, 1000); 
 

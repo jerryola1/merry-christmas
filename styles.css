@@ -14,7 +14,6 @@ body {
     font-size: 2em;
     animation-duration: 3s;
     animation-fill-mode: forwards;
-    /* Add other common styles for animated elements */
 }
 
 #star1 {
@@ -28,7 +27,6 @@ body {
     top: 15%;
     right: 15%;
     animation-name: swing;
-    /* Additional individual styling */
 }
 
 /* Define keyframes for animations */
@@ -64,7 +62,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Adjust as needed */
+    height: 100vh; 
 }
 
 #greeting-text {
@@ -73,17 +71,16 @@ body {
     color: #E63946; /* Festive red color */
     text-shadow: 3px 3px 4px #000000; /* Shadow for depth */
     animation: glow 2s ease-in-out infinite alternate;
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 10px;
 }
 
-/* ... [existing styles] ... */
 
 #greeting-text1 {
-    font-size: 1em; /* Smaller than the main greeting */
-    color: #4CAF50; /* A green shade that complements the Christmas theme */
-    text-shadow: 1px 1px 3px #000000; /* Subtle text shadow for depth */
-    margin-top: 20px; /* Space from the main greeting text */
-    margin-bottom: 20px; /* Space before any other content that follows */
+    font-size: 1em; 
+    color: #4CAF50; 
+    text-shadow: 1px 1px 3px #000000; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
     font-family: 'Arial', sans-serif; /* Consistent with the body font, or choose another */
     opacity: 0.9; /* Slightly transparent for a softer look */
     animation: fadeIn 2s ease-in-out; /* Reuse the fadeIn animation for consistency */
@@ -159,32 +156,29 @@ body {
     
     #greeting-container {
         justify-content: flex-start; /* Aligns content to the top */
-        margin-top: 15px; /* Adjust this value to move the container up */
+        margin-top: 10px; /* Adjust this value to move the container up */
     }
 
     .snowflake {
-        font-size: 1em; /* Smaller snowflakes on smaller screens */
+        font-size: 1em; 
     }
 
     #toggle-music {
-        margin-top: -15px; /* Slightly less negative margin for smaller screens */
+        margin-top: -15px; 
         margin-bottom: 15px;
     }
 }
 
 /* Christmas Tree Styles */
 #christmas-tree-container {
-    /* left: 50%;
-    bottom: 10%; 
-    transform: translateX(-50%); */
     text-align: center;
     margin-bottom: 20px;
 }
 
 .christmas-tree {
     color: green;
-    font-size: 15em; /* Adjust the size as needed */
-    user-select: none; /* Prevents text selection */
+    font-size: 15em; 
+    user-select: none; 
 }
 
 /* Keyframes for fade-in animation */
@@ -221,11 +215,24 @@ body {
 
 @keyframes fallRotate {
     0% { 
-        transform: translateY(-100vh) rotate(0deg); /* Start above the viewport */
+        transform: translateY(-100vh) rotate(0deg); 
     }
     100% { 
-        transform: translateY(100vh) rotate(360deg); /* End below the viewport */
+        transform: translateY(100vh) rotate(360deg); 
     }
 }
 
 
+#baby-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-top: 20px; /* Space between the greeting text and image */
+
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}

@@ -1,0 +1,231 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #003366; /* Dark blue background */
+    color: white;
+    margin: 0;
+    padding: 20px;
+    /* overflow: hidden;  */
+}
+
+
+.animated-element {
+    position: absolute;
+    font-size: 2em;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    /* Add other common styles for animated elements */
+}
+
+#star1 {
+    top: 10%;
+    left: 10%;
+    animation-name: fadeInMove;
+    /* Additional individual styling */
+}
+
+#bell1 {
+    top: 15%;
+    right: 15%;
+    animation-name: swing;
+    /* Additional individual styling */
+}
+
+/* Define keyframes for animations */
+@keyframes fadeInMove {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes swing {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+#toggle-music {
+    z-index: 100;
+    position: relative;
+    background-color: #7e971c; /* Green background */
+    color: white; /* White text */
+    padding: 5px 10px; /* Padding for button size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 0.8em; /* Font size */
+    cursor: pointer; /* Cursor to indicate it's clickable */
+    margin-top: -20px; /* Moves the button up; adjust value as needed */
+    margin-bottom: 20px; /* Adds some space below the button */
+}
+
+
+
+#greeting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust as needed */
+}
+
+#greeting-text {
+    font-family: 'Great Vibes', cursive; /* Decorative font */
+    font-size: 4em;
+    color: #E63946; /* Festive red color */
+    text-shadow: 3px 3px 4px #000000; /* Shadow for depth */
+    animation: glow 2s ease-in-out infinite alternate;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+/* ... [existing styles] ... */
+
+#greeting-text1 {
+    font-size: 1em; /* Smaller than the main greeting */
+    color: #4CAF50; /* A green shade that complements the Christmas theme */
+    text-shadow: 1px 1px 3px #000000; /* Subtle text shadow for depth */
+    margin-top: 20px; /* Space from the main greeting text */
+    margin-bottom: 20px; /* Space before any other content that follows */
+    font-family: 'Arial', sans-serif; /* Consistent with the body font, or choose another */
+    opacity: 0.9; /* Slightly transparent for a softer look */
+    animation: fadeIn 2s ease-in-out; /* Reuse the fadeIn animation for consistency */
+    margin-bottom: 40px;
+}
+
+
+
+/* Glow Animation */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #E63946, 0 0 20px #0d16cb, 0 0 30px #d5d526, 0 0 40px #E63946;
+    }
+    to {
+        text-shadow: 0 0 20px #0660de, 0 0 30px #E63946, 0 0 40px #d5e639, 0 0 50px #E63946, 0 0 60px #e4d6d7;
+    }
+}
+
+#snowflake-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden;
+}
+
+/* Snowflake Styles */
+.snowflake {
+    color: #ffffff;
+    font-size: 1em;
+    position: absolute;
+    top: -2em;
+    opacity: 0.85;
+    transform: rotate(45deg);
+    animation-name: fall;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-name: fall;
+    animation-duration: 10s;
+}
+
+
+.animation-container {
+    position: relative;
+    z-index: 1; 
+    overflow: hidden;
+    width: 100%;
+    height: 10vh; /* Adjust as needed to contain animations */
+}
+
+
+
+
+/* Keyframes for falling snowflakes */
+@keyframes fall {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+}
+
+#star1, #bell1, #star2, #bell2 {
+    position: absolute;
+    /* Adjust top, right, bottom, left as needed */
+}
+
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    #greeting-text {
+        font-size: 2em;
+    }
+    
+    #greeting-container {
+        justify-content: flex-start; /* Aligns content to the top */
+        margin-top: 15px; /* Adjust this value to move the container up */
+    }
+
+    .snowflake {
+        font-size: 1em; /* Smaller snowflakes on smaller screens */
+    }
+
+    #toggle-music {
+        margin-top: -15px; /* Slightly less negative margin for smaller screens */
+        margin-bottom: 15px;
+    }
+}
+
+/* Christmas Tree Styles */
+#christmas-tree-container {
+    /* left: 50%;
+    bottom: 10%; 
+    transform: translateX(-50%); */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.christmas-tree {
+    color: green;
+    font-size: 15em; /* Adjust the size as needed */
+    user-select: none; /* Prevents text selection */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.balloon {
+    width: 30px; /* Adjust size */
+    height: 40px; /* Adjust size */
+    background-color: red; /* Default color, will be overridden by JS */
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.7; /* Slightly transparent for a more realistic look */
+    background-size: cover;
+    background-image: url('balon.png'); /* Use an image */
+    animation: fall 5s linear infinite, rotate 5s linear infinite; /* Combined animations */
+    animation: fallRotate 5s linear infinite;
+
+    /* Start the balloons off-screen */
+    transform: translateY(-100vh); /* Start above the viewport */
+}
+
+/* Keyframes for falling animation */
+
+
+@keyframes fallRotate {
+    0% { 
+        transform: translateY(-100vh) rotate(0deg); /* Start above the viewport */
+    }
+    100% { 
+        transform: translateY(100vh) rotate(360deg); /* End below the viewport */
+    }
+}
+
+

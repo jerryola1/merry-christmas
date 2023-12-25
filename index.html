@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="greeting-container">
+
+        <div class="balloon" id="balloon1"></div>
+        <div class="balloon" id="balloon2"></div>
+        <div class="balloon" id="balloon3"></div>
+
+        <div class="animation-container">
+            <span class="animated-element" id="star1">⭐</span>
+            <span class="animated-element" id="bell1">🔔</span>
+            <span class="animated-element" id="star2">⭐</span>
+            <span class="animated-element" id="bell2">🔔</span>
+        </div>
+
+        <div id="christmas-tree-container"></div>
+        <h1 id="greeting-text">Merry Christmas!</h1>
+        <h1 id="greeting-text1">From all of us @ Korrect Technologies</h1>
+
+        <button id="toggle-music">Play Music</button>
+
+        <div id="snowflake-container"></div>
+    </div>
+
+    <!-- <button id="toggle-music">Play Music</button> -->
+    <audio id="background-music" loop>
+        <source src="christmas-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

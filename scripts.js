@@ -70,12 +70,12 @@ function createBalloon() {
     // Optional: Remove balloon after it falls
     setTimeout(() => {
         balloon.remove();
-    }, 7000); // Adjust time to match animation duration
+    }, 7000); 
 
     // Randomize size
-    const size = Math.random() * 20 + 15; // Random size between 15px and 35px
+    const size = Math.random() * 20 + 15; 
     balloon.style.width = size + 'px';
-    balloon.style.height = size * 1.5 + 'px'; // Height is 1.5 times the width
+    balloon.style.height = size * 1.5 + 'px'; 
 
     // Randomize color
     const colors = ['red', 'green', 'blue', 'yellow', 'pink', 'purple'];
